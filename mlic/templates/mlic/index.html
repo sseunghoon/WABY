@@ -1,0 +1,56 @@
+{% extends 'mlic/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock head %}
+        
+{% block body %}
+
+    <section id="main_contents">
+        <div class="wrapper">
+            <div class="title">
+                <h3 class="main_title">군생활 강도 측정</h3>
+                <h4 class="sub_title">Military Life Intensity Check</h4>
+            </div>
+            <div class="intro">
+                <h1>당신의 군생활 강도는?</h1>
+                <div class="type">
+                    <ul class="type_list">
+                        <li>강철부대</li>
+                        <li>말랑부대</li>
+                        <li>표준 K-ARMY</li>
+                        <li>AA부대</li>
+                        <li>BB부대</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="button">
+                <a href="{% url 'mlic:form' %}">
+                    <button class="start" type="button">시작하기</button>
+                </a>
+            </div>
+            
+            <div class="result_data">
+                <div class="data_wrap">
+                    <h3>참여자 수</h3>
+                    <ul>
+                        <li>총 {{ total_num }} 명</li>
+                        <li>육군 : {{ army_num }} 명</li>
+                        <li>해군 : {{ navy_num }} 명</li>
+                        <li>공군 : {{ airforce_num }} 명</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+            <div class="waby">
+                <a href="http://waby.pythonanywhere.com/mlic/">WABY</a>
+            </div>
+        </div>
+    </section>
+
+{% endblock body %}

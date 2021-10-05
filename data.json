@@ -1,0 +1,669 @@
+[
+{
+    "model": "mlic.question",
+    "pk": 1,
+    "fields": {
+        "number": 1,
+        "content": "무슨 전화기를 사용하셨나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 2,
+    "fields": {
+        "number": 2,
+        "content": "부대 입영 / 휴가 복귀 수단은 무엇이었나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 3,
+    "fields": {
+        "number": 3,
+        "content": "PX의 형태는 어떤 것이었나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 4,
+    "fields": {
+        "number": 4,
+        "content": "군생활 동안에 사귀던 여자친구와 헤어졌나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 5,
+    "fields": {
+        "number": 5,
+        "content": "군생활 도중 북한의 도발이 있었나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 6,
+    "fields": {
+        "number": 6,
+        "content": "특수 목적을 가진 부대였나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 7,
+    "fields": {
+        "number": 7,
+        "content": "부대 내 구타가 있었나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 8,
+    "fields": {
+        "number": 8,
+        "content": "평균적인 휴가 일수는 며칠인가요?(답변은 연가 24일 기준)"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 9,
+    "fields": {
+        "number": 9,
+        "content": "제일 힘든 훈련은 무엇이었나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 10,
+    "fields": {
+        "number": 10,
+        "content": "선후임간의 기수차이는 어떠셨나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 11,
+    "fields": {
+        "number": 11,
+        "content": "경계근무 간 실탄을 착탄(보유)하셨나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 12,
+    "fields": {
+        "number": 12,
+        "content": "군생활을 하는 동안 행군을 얼마나 하셨나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 13,
+    "fields": {
+        "number": 13,
+        "content": "외출/외박 위수지역의 수준은 어땠나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 14,
+    "fields": {
+        "number": 14,
+        "content": "복무 기간이 어떻게 되시나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 15,
+    "fields": {
+        "number": 15,
+        "content": "정해진 기간만 채우면 자동 진급이 되셨나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 16,
+    "fields": {
+        "number": 16,
+        "content": "훈련을 얼마나 하셨나요?"
+    }
+},
+{
+    "model": "mlic.question",
+    "pk": 17,
+    "fields": {
+        "number": 17,
+        "content": "탈영/자살을 시도하거나 영창(혹은 군기교육대)를 간 적이 있나요?"
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 1,
+    "fields": {
+        "content": "공중전화",
+        "intensity": 3,
+        "question": 1
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 2,
+    "fields": {
+        "content": "생활관 폰",
+        "intensity": 2,
+        "question": 1
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 3,
+    "fields": {
+        "content": "스마트폰",
+        "intensity": 1,
+        "question": 1
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 4,
+    "fields": {
+        "content": "배-섬",
+        "intensity": 3,
+        "question": 2
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 5,
+    "fields": {
+        "content": "버스,도보-도심 주변",
+        "intensity": 1,
+        "question": 2
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 6,
+    "fields": {
+        "content": "택시,부대차량-산골",
+        "intensity": 2,
+        "question": 2
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 7,
+    "fields": {
+        "content": "부대 내 PX",
+        "intensity": 1,
+        "question": 3
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 8,
+    "fields": {
+        "content": "황금 마차",
+        "intensity": 3,
+        "question": 3
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 9,
+    "fields": {
+        "content": "...나쁜 year",
+        "intensity": 3,
+        "question": 4
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 10,
+    "fields": {
+        "content": "꽃 신 신겨줬음",
+        "intensity": 1,
+        "question": 4
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 11,
+    "fields": {
+        "content": "먼저 있었냐고 물어봐야 되는 거 아님???",
+        "intensity": 2,
+        "question": 4
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 12,
+    "fields": {
+        "content": "다행히도 없었음",
+        "intensity": 1,
+        "question": 5
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 13,
+    "fields": {
+        "content": "전쟁 발발을 대비한 출동(사격)대기",
+        "intensity": 4,
+        "question": 5
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 14,
+    "fields": {
+        "content": "실제 대응사격 등 전투경험",
+        "intensity": 5,
+        "question": 5
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 15,
+    "fields": {
+        "content": "강철부대 출연 부대(특전사, UDT,SDT,SSU, 707, 해병대수색대)",
+        "intensity": 5,
+        "question": 6
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 16,
+    "fields": {
+        "content": "특수부대",
+        "intensity": 5,
+        "question": 6
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 17,
+    "fields": {
+        "content": "메이커 부대",
+        "intensity": 3,
+        "question": 6
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 18,
+    "fields": {
+        "content": "그냥 부대",
+        "intensity": 1,
+        "question": 6
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 19,
+    "fields": {
+        "content": "구타 없었음",
+        "intensity": 1,
+        "question": 7
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 20,
+    "fields": {
+        "content": "일상적인 구타",
+        "intensity": 5,
+        "question": 7
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 21,
+    "fields": {
+        "content": "가끔가다 한 번쯤 나옴",
+        "intensity": 3,
+        "question": 7
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 22,
+    "fields": {
+        "content": "50일 이하, 휴가에 아주아주 짠 편",
+        "intensity": 3,
+        "question": 8
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 23,
+    "fields": {
+        "content": "51~60일, 휴가에 조금 짠 편",
+        "intensity": 2,
+        "question": 8
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 24,
+    "fields": {
+        "content": "61~70일, 꽤 괜찮을지도?",
+        "intensity": 1,
+        "question": 8
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 25,
+    "fields": {
+        "content": "71~80일, 휴가 하나는 잘 주네.",
+        "intensity": 0,
+        "question": 8
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 26,
+    "fields": {
+        "content": "81일~, 휴가 하나 만큼은 달다 달아.",
+        "intensity": 0,
+        "question": 8
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 27,
+    "fields": {
+        "content": "유격 및 혹한기",
+        "intensity": 3,
+        "question": 9
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 28,
+    "fields": {
+        "content": "KCTC(육군과학화전투훈련)",
+        "intensity": 6,
+        "question": 9
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 29,
+    "fields": {
+        "content": "호국 훈련",
+        "intensity": 6,
+        "question": 9
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 30,
+    "fields": {
+        "content": "공중 지상 합동훈련",
+        "intensity": 4,
+        "question": 9
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 31,
+    "fields": {
+        "content": "특수 훈련(부대 맞춤)",
+        "intensity": 5,
+        "question": 9
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 32,
+    "fields": {
+        "content": "해당사항 없음",
+        "intensity": 0,
+        "question": 9
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 33,
+    "fields": {
+        "content": "꼬인 기수(선임은 가깝고 많은데 후임은 멀고 적음)",
+        "intensity": 3,
+        "question": 10
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 34,
+    "fields": {
+        "content": "풀린 기수(선임은 멀고 적은데 후임은 가깝고 많음)",
+        "intensity": 0,
+        "question": 10
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 35,
+    "fields": {
+        "content": "평범했음",
+        "intensity": 1,
+        "question": 10
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 36,
+    "fields": {
+        "content": "실탄 보유(착탄)",
+        "intensity": 5,
+        "question": 11
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 37,
+    "fields": {
+        "content": "공포탄, 혹은 빈 탄창",
+        "intensity": 2,
+        "question": 11
+    }
+},
+    {
+    "model": "mlic.choice",
+    "pk": 38,
+    "fields": {
+        "content": "경계근무가 없었음",
+        "intensity": 0,
+        "question": 11
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 39,
+    "fields": {
+        "content": "0km",
+        "intensity": 0,
+        "question": 12
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 40,
+    "fields": {
+        "content": "30km이하",
+        "intensity": 2,
+        "question": 12
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 41,
+    "fields": {
+        "content": "60km이하",
+        "intensity": 3,
+        "question": 12
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 42,
+    "fields": {
+        "content": "90km이하",
+        "intensity": 4,
+        "question": 12
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 43,
+    "fields": {
+        "content": "90km초과",
+        "intensity": 5,
+        "question": 12
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 44,
+    "fields": {
+        "content": "시골, 펜션을 잡아야함",
+        "intensity": 3,
+        "question": 13
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 45,
+    "fields": {
+        "content": "소도시, 그래도 꽤 놀만함",
+        "intensity": 1,
+        "question": 13
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 46,
+    "fields": {
+        "content": "대도시, 없는게 없음",
+        "intensity": 0,
+        "question": 13
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 47,
+    "fields": {
+        "content": "24개월 이상",
+        "intensity": 3,
+        "question": 14
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 48,
+    "fields": {
+        "content": "21개월 이상",
+        "intensity": 2,
+        "question": 14
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 49,
+    "fields": {
+        "content": "18개월 이상",
+        "intensity": 1,
+        "question": 14
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 50,
+    "fields": {
+        "content": "체력 등 상관없이 자동진급",
+        "intensity": 0,
+        "question": 15
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 51,
+    "fields": {
+        "content": "어림도 없지, 기준 미달 시 얄짤 없이 진급 누락",
+        "intensity": 3,
+        "question": 15
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 52,
+    "fields": {
+        "content": "1달에 1번 이상, 없는 훈련도 만들어서",
+        "intensity": 5,
+        "question": 16
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 53,
+    "fields": {
+        "content": "2달에 1번, 쉴만 하면 하는",
+        "intensity": 3,
+        "question": 16
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 54,
+    "fields": {
+        "content": "3달에 1번, 잊을만 하면 돌아오는",
+        "intensity": 2,
+        "question": 16
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 55,
+    "fields": {
+        "content": "큼지막한 훈련만 하고 딱히..?",
+        "intensity": 0,
+        "question": 16
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 56,
+    "fields": {
+        "content": "그게, 나야",
+        "intensity": 5,
+        "question": 17
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 57,
+    "fields": {
+        "content": "생각이 든 적은 있었다.",
+        "intensity": 3,
+        "question": 17
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 58,
+    "fields": {
+        "content": "같은 중대에 그런 사람이 있었음",
+        "intensity": 1,
+        "question": 17
+    }
+},
+{
+    "model": "mlic.choice",
+    "pk": 59,
+    "fields": {
+        "content": "큰 사건/사고 없는 클린한 부대",
+        "intensity": 0,
+        "question": 17
+    }
+}
+]

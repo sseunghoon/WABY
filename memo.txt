@@ -1,0 +1,20 @@
+source venv/bin/activate
+
+sudo service mysql start
+
+sudo mysql -u root
+
+OSError: mysql_config not found 발생 시
+https://ohohs.tistory.com/entry/Error-Solution-OSError-mysqlconfig-not-found
+
+python manage.py dumpdata main --output data.json --indent 4
+
+python manage.py loaddata data.json
+
+loaddata data.json 실행할 때
+InternalError: 1366, "Incorrect String Value" 해결하기
+ALTER TABLE [column명] CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+
+
+

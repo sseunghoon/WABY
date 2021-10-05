@@ -1,0 +1,115 @@
+{% extends 'mlic/base.html' %}
+{% load static %}
+{% block head %}
+<!-- 네이버 구글 등 검색 표준 메타 데이터 삽입 시 검색이 더 잘됨 -->
+        
+<!-- 아래 메타 데이터들은 공유 시 링크위 썸네일을 표시해주는 것들 -->
+    <meta property="og:title" content="군생활 강도 측정기" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="나에게 꼭 맞는 개발 유형은 무엇일까?" />
+        
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}">
+{% endblock head %}
+
+{% block body %}
+
+    <section class="main_contents">
+        <div class="wrapper">
+            <div class="result">
+                <div class="titles">
+                    <h1>당신의 군생활 강도:{{intensity_sum}}</h1>
+                    <h3>{{summary}}</h3>
+                </div>
+                <div class="result_img">
+                    <img src="{% static 'img/honey.jpg'%}" alt="frontend">
+                </div>
+                <br>
+            </div>
+            <div class="result_explains">
+                <div class="explain">
+                    <h3 class="title">다른 참여자들과 비교한다면?</h3>
+                    <ul>
+                        {% if isTop %}
+                        <li>모든 참여자들 중 {{rank}}/{{result_cnt}} 등, 상위 {{percentage}}%입니다. </li>
+                        {% else %}
+                        <li>모든 참여자들 중 {{rank}}/{{result_cnt}} 등, 하위 {{percentage}}%입니다. </li>
+                        {% endif %}
+                        
+                        {% if belongIsTop %}
+                        <li>{{belong_str}} 참여자들 중 {{belongRank}}/{{belongResult_cnt}} 등, 상위 {{ belongPercentage }}%입니다. </li>
+                        {% else %}
+                        <li>{{belong_str}} 참여자들 중 {{belongRank}}/{{belongResult_cnt}} 등, 하위 {{ belongPercentage }}%입니다. </li>
+                        {% endif %}
+                        
+                        {% if serialIsTop %}
+                        <li>{{serial_str}} 참여자들 중 {{serialRank}}/{{serialResult_cnt}} 등, 상위 {{ serialPercentage }}%입니다. </li>
+                        {% else %}
+                        <li>{{serial_str}} 참여자들 중 {{serialRank}}/{{serialResult_cnt}} 등, 하위 {{ serialPercentage }}%입니다. </li>
+                        {% endif %}
+                        
+                        {% if customIsTop %}
+                        <li>{{belong_str}}+{{serial_str}} 참여자들 중 {{customRank}}/{{customResult_cnt}} 등, 상위 {{ customPercentage }}%입니다. </li>
+                        {% else %}
+                        <li>{{belong_str}}+{{serial_str}} 참여자들 중 {{customRank}}/{{customResult_cnt}} 등, 하위 {{ customPercentage }}%입니다. </li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="buttons">
+                <ul>
+                    <li>
+                        <a href="{% url 'mlic:index' %}">
+                            <button type="button">테스트 다시 하기</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <section id="survey">
+                        <div class="wrapper">
+                            <form id="form" action="{% url 'mlic:feedback' %}" method='post'>
+                                {% csrf_token %}
+                                <h2 class="feedbackTitle">메세지 / 피드백</h2>
+                                <textarea class="feedback_content" name="feedback_content" cols="20" rows="10" maxlength="500" placeholder="감사합니다."></textarea>
+                                <input type="text" class="input_resultId" name="result_id" value="{{result_id}}"/>
+                                <input class="submin_btn" type="submit" value="전 송" class="submit_btn"/>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+                
+            </div>
+            <div class="share">
+                <div class="url">
+                    <button class="copy_btn" type="button">URL 복사하기</button>
+                </div>
+                <div class="facebook">
+                    <button class="facebook_share" type="button">Facebook 공유하기</button>
+                </div>
+                <div class="kakao">
+                    <button class="kakao_share" type="button">카카오톡 공유하기</button>
+                </div>
+                <div>
+                    <button class="intention" type="button">기획 의도</button>
+                </div>
+                <div>
+                    <button id="myBtn" class="feedback" type="button">제작자에게 메세지 / Feedback</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock body %}
+
+{% block js %}
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="{% static 'js/result.js' %} "></script>
+    
+{% endblock js %}

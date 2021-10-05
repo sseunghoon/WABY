@@ -1,0 +1,9 @@
+LectureNote
+
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlit
+
+settings.py

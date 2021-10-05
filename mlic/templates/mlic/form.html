@@ -1,0 +1,87 @@
+{% extends 'mlic/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/form1.css' %}">
+{% endblock head %}
+        
+{% block body %}
+
+    <section id="survey">
+        <div class="wrapper">
+            <form id="form" action="{% url 'mlic:submit' %}" method='post'>
+                {% csrf_token %}
+                {% for question in questions %}
+                    <div class="test">
+                        <div class="question_container">
+                            <h3 class="number">{{question.number}}/{{questions_count}} </h3>
+                            <h3 class="question">{{question.content}}</h3>
+                        </div>
+                        <div class="answer">
+                            {% for choice in question.choice_set.all %}
+                                <div>
+                                    <input id="choice-{{choice.pk}}" type="radio" name="question-{{ question.number}}" value="{{choice.intensity}}">
+                                    <label for="choice-{{choice.pk}}" for="">{{choice.content}}</label>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        {% if not forloop.first %}
+                        <div class="btn_wrap btn_sort">
+                        {% else %}
+                            <div class="btn_wrap">
+                        {% endif %}
+                        {% if not forloop.first %}
+                                <button class="prev_btn">이 전</button>
+                        {% endif %}
+                                <button class="next_btn">다 음</button>
+                            </div>
+                        </div>
+                {% endfor %}
+                    <div class="test">
+                        <div class="question_container">
+                            <h2 class="question">소속과 군번</h2>
+                        </div>
+                        <div class="answer">
+                            <label for="select_belong">소속</label>
+                            <select name="belong" class="select">
+                              <option value="1" class="select_option">육군</option>
+                              <option value="2" class="select_option">해군</option>
+                              <option value="3" class="select_option">공군</option>
+                            </select>
+                        </div>
+                        <div class="answer">
+                            <label for="select_serial">군번</label>
+                            <select name="serial_num" class="select">
+                              <option value="21" class="select_option">21</option>
+                              <option value="20" class="select_option">20</option>
+                              <option value="19" class="select_option">19</option>
+                              <option value="18" class="select_option">18</option>
+                              <option value="17" class="select_option">17</option>
+                              <option value="16" class="select_option">16</option>
+                              <option value="15" class="select_option">15</option>
+                              <option value="14" class="select_option">14</option>
+                              <option value="13" class="select_option">13</option>
+                              <option value="12" class="select_option">12</option>
+                              <option value="11" class="select_option">11</option>
+                              <option value="10" class="select_option">10이하</option>
+                            </select>
+                        </div>
+                        <div class="btn_wrap btn_sort">
+                                <button class="prev_btn">이 전</button>
+                                <input type="submit" value="확 인" class="submit_btn"/>
+                            </div>
+                        </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+{% endblock body %}
+
+{% block js %}
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="{% static 'js/form.js' %} "></script>
+
+{% endblock js %}
