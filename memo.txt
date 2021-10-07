@@ -15,6 +15,13 @@ loaddata data.json 실행할 때
 InternalError: 1366, "Incorrect String Value" 해결하기
 ALTER TABLE [column명] CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+pip install uwsgi
 
+[서버 가동]
+uwsgi --http :80 --home /workspace/WABY/venv --chdir /workspace/WABY --static-map /static=/workspace/WABY/staticfiles/ -w WABY.wsgi
 
+[서버 가동 요약]
+uwsgi -i .config/uwsgi/uwsgi.ini
 
+[결론 / nginx 실행 후 서버 가동]
+service nginx start && /workspace/WABY/venv/bin/uwsgi -i /workspace/WABY/.config/uwsgi/uwsgi.ini
